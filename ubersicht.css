@@ -1,0 +1,113 @@
+.woinbayern { 
+padding: 0 15px 15px 0px;
+}
+.woinbayern tr td {
+border-bottom: 1px solid #B8D8F0;
+line-height: 17px;
+padding: 3px !important;
+}
+.woinbayern tr th {
+padding: 9px 3px !important;
+}
+#ifgkarte,
+#ifgkarte img {
+position: relative;
+width: 650px !important;
+height: 641px !important;
+cursor:default !important;
+border: 1px solid rgb(204, 204, 204);
+}
+#ifgkarte div {
+position:absolute;
+height:8px;
+width:8px;
+left:-4px;
+top:-4px;
+color: transparent;
+cursor:pointer;
+margin:0 1px;
+display: block;
+background-repeat: no-repeat ;
+background-position: 0 0 ;
+background-color: transparent;
+}
+#kartenlegende {
+list-style: none;
+}
+#kartenlegende li {
+background: no-repeat scroll 0 8px transparent;
+padding-left: 15px;
+}
+
+#kommunen div,
+#ifgkarte a {
+display: none !important;
+background: none !important;
+}
+#woinbayern tbody tr td + td + td + td {
+font-size: 80%;
+}
+.satzlink a,
+.tooltip a,
+.leaflet-popup-content a[title="Direkt zur Satzung"],
+#ifgkarte a {
+display: block;
+height: 16px;
+text-decoration: none;
+width: 16px;
+background-repeat: no-repeat;
+float: right;
+}
+.satzlink a[href=""] {
+    background-image: none;
+}
+
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+    display:none;
+    background:transparent url(images/blue_arrow_78.png);
+    height:30px;
+    width:160px;
+    padding:25px;
+    color:#eee;
+    font-weight: bold;
+    font-size: 12px;
+}
+.tooltip a {
+float: right;
+}
+
+
+
+/* payload */
+
+#woinbayern.woinbayern thead tr th {
+background: url("data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=") center right no-repeat transparent; 
+height: 9px;
+width: 21px;
+margin: 4px 0 0 0;
+}
+#woinbayern.woinbayern thead tr th:last-child {
+background-image: none ; 
+}
+
+
+
+#ifgkarte div,
+#kartenlegende li {
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAAv0lEQVQYlTXPIU8CYQCA4ecDIZlMUBmb3epvOGYmOjVRbhb/g93oHyAddJKbg81sh00OdzvGeZDwzqC+9UkvvzVwNyC5JMENwp8JD0zXcVyvhsN63u/XT9Q9JghN3I7j+P5sNALt7ZaiEMryfM6qEREdNxv72cwxTakq7VZLFx0GJzn1x2KhU5ZUlf1yqTgc7FChueL0Is8HisJXlknz3DrLvOKNx4DQI4mIutjhHS9MMq7+VwKuu0Tf+GSKZ9Q/0IFOVMgrTdIAAAAASUVORK5CYII%3D") ;
+}
+#ifgkarte div.vorbereitung,
+#kartenlegende li.vorbereitung {
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH2wcOEyUlW0X05gAAANNJREFUGJU1z7EOwVAAQNH7lE6dxNCuIrH3P9qdUWKziIHJD9iNfsDGbpI0lYjRYvISLZHSajtVnwF3PdPV+FYB+q7LtNGgIyUGcPgZYjJhHQRDJWVX+X5LzeeoZpMVIDSgv1wOR/X6AABdfwAJQqRt30dWHAenKK5k2YaiCIESXa9hWWCauNUoQl0uO0wzBUqy7EyS5MQxlCVoUmLYduRCwut1JwwjguCO58F+z0wDDscjthBp+/mMOZ1yPA+2W1Z5zlj8T4CeZeG833C7sQYWgPoAC4FeOn1WF+AAAAAASUVORK5CYII%3D") ;
+}
+#ifgkarte div.landkreis,
+#kartenlegende li.landkreis {
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAA3klEQVQYlT2PsU7CQABA3yGXQBhdbN2I0Z3Vb7hGJxNHo04uxIWV+AuGEb+h7ayTDrK4aIjBSZdKzqINd6Q13DFgfOvLGx6sqQHnhFHM5n4MnALizyHY7aXd64k/vnrxO0e3ns7A02ongNgAzrr9m8uLw21AMDOCwjrmldwjf/yoESr1Oau4e/omyyucByklNAJobkV1ytyPnjPmiyXOw3tmsNbC7w84R52vh/Rt8hoZY5BSYq1Faw3FGMppIgBBqx0TKkUjWJfFGPR9QqUPxP8JnNAMFG4J5TQFhoBfAVS8XfVK8EgaAAAAAElFTkSuQmCC") ;
+}
+#ifgkarte div.ausserkraft,
+#kartenlegende li.ausserkraft {
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAAcklEQVQYlXWPSwqDQBBE35szuDQ70UPFEybiGfRAisZ9Jos0cQhYUFBNV/UHvripg/oKjkBL0VzU/McVqIlkBnp1UifgHqYn6hHFDFRAFcas7okT70J7Kh2LFXOs6GPCANCp68WRze+TlNJD3dUtkg3AB1LkJUsnqQ1XAAAAAElFTkSuQmCC") ;
+}
+
+
