@@ -9,6 +9,10 @@ padding: 3px !important;
 .woinbayern tr th {
 padding: 9px 3px !important;
 }
+#map {
+    height: 50em
+}
+
 #ifgkarte,
 #ifgkarte img {
 position: relative;
