@@ -34,11 +34,11 @@ jQuery(document).ready(function() {
 
 
         //  leafleat 
-		var map = L.map('map').setView([48.949, 11.395], 7);
+        var map = L.map('map').setView([48.949, 11.395], 7);
 
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-			attribution: 'Map data &copy; 2014 OpenStreetMap contributors'
-		}).addTo(map);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; 2014 OpenStreetMap contributors'
+        }).addTo(map);
 
         $.getJSON( '/wp-content/plugins/ifg-table-map/js/bayern.json' , function(data) {
           var geoLayer;
@@ -47,11 +47,11 @@ jQuery(document).ready(function() {
           }).addTo(map);
         });
 
-		var LeafIcon = L.Icon.extend({
-			options: {
-				iconSize:     [10, 10],
-			}
-		});
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize:     [10, 10],
+            }
+        });
 
 $(document).ready(function() {
     $.each( $('#woinbayern tr'), function() { 
