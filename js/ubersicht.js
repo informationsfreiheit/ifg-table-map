@@ -21,6 +21,7 @@ var LeafIcon = L.Icon.extend({
 jQuery(document).ready(function() { 
     $("#woinbayern").tablesorter(); 
 
+    // get city name, pos and pdf from table
     $.each( $('#woinbayern tr'), function() { 
         var pos = $(this).data('pos') ;
         var gemart = $(this).data('gemart') ;
