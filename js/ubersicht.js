@@ -47,9 +47,10 @@ jQuery(document).ready(function() {
     $.each( $('#woinbayern tr'), function() { 
         var pos = $(this).data('pos') ;
         var gemart = $(this).data('gemart') ;
-        var name = $(this).find('.name').html() ;
-        var satzlink = $(this).find('.satzlink').html();
-   
+        var cityname = $(this).attr('id') ;
+        var name = $(this).find('.name').text() ;
+        var satzlink = $(this).find('.satzlink').html(); 
+
         if ( gemart == 'Landkreis' ) {
             var icon = blueIcon ;
         } else if ( gemart == 'Ausarbeitung' ) {
@@ -62,7 +63,7 @@ jQuery(document).ready(function() {
 
         if ( typeof pos != 'undefined' && pos != 'none' ) {
             pos = pos.split(',');
-            L.marker([ Number(pos[0]), Number(pos[1]) ], {icon: icon}).bindPopup( satzlink + name ).addTo(map);
+            L.marker([ Number(pos[0]), Number(pos[1]) ], {icon: icon}).bindPopup( satzlink + "<a href='#" + cityname + "'>" + name + "</a>" ).addTo(map);
         }
     }); 
 });
