@@ -26,7 +26,8 @@ jQuery(document).ready(function() {
         var pos = $(this).data('pos') ;
         var cityname = $(this).attr('id') ;
         var name = $(this).find('.name').text() ;
-        var satzlink = $(this).find('.satzlink').html(); 
+        var satzlink = $(this).find('td.satzlink').html(); 
+
 
         var iconString = 'icon' + $(this).data('gemart') ;
 

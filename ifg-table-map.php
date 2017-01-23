@@ -61,7 +61,7 @@ function ifgtablemap( $atts, $content = 0 ) {
 <td>$city[start]</td>
 <td>$city[bemerkung]</td>
 <td class='resident'>$cityresident</td>
-<td class='satzlink'><a title='Direkt zur Satzung' href='$city[satzlink]'> </a></td>
+<td class='satzlink'><a title='Direkt zur Satzung' class='satzlink' href='$city[satzlink]'> </a></td>
 </tr>";
     }
     $html .= "</tbody></table>

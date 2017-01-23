@@ -51,10 +51,7 @@ background: none !important;
 #woinbayern tbody tr td + td + td + td {
 font-size: 80%;
 }
-.satzlink a,
-.tooltip a,
-.leaflet-popup-content a[title="Direkt zur Satzung"],
-#ifgkarte a {
+.copytext a.satzlink {
 display: block;
 height: 16px;
 text-decoration: none;
