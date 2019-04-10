@@ -33,8 +33,8 @@ add_action( 'wp_enqueue_scripts', 'ifgtablemapScript' );
 
 
 function ifgtablemap( $atts, $content = 0 ) {
+    $content = file_get_contents( plugin_dir_url() . 'ifg-table-map/bayern.yaml') ;
     $citys = yaml_parse( $content );
-
     $citycounter = 0;
     $bayernAllResident = 12691568 ;
 
