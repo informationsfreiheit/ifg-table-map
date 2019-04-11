@@ -33,7 +33,28 @@ add_action( 'wp_enqueue_scripts', 'ifgtablemapScript' );
 
 
 function ifgtablemap( $atts, $content = 0 ) {
-    $content = file_get_contents( plugin_dir_url() . 'ifg-table-map/bayern.yaml') ;
+
+    $bayern_yaml = plugin_dir_path( __FILE__ ) .  'bayern.yaml';
+
+    if( isset( $_REQUEST['load_ifg_table_map'] )) {
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, "https://raw.githubusercontent.com/informationsfreiheit/kommunen/master/bayern.yaml");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+
+        $out = curl_exec($ch);
+
+        curl_close($ch);
+
+        $fp = fopen( $bayern_yaml , 'w');
+        fwrite($fp, $out);
+        fclose($fp);
+    }
+
+    $content = file_get_contents( $bayern_yaml ) ;
+
     $citys = yaml_parse( $content );
     $citycounter = 0;
     $bayernAllResident = 12691568 ;
