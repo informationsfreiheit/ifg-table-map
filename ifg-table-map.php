@@ -14,7 +14,7 @@ Author URI: http://klml.de
 function ifgtablemapScript(){
     if( is_page( 'ubersicht' ) ) {
         wp_register_script( 'jquerytoolsleaflettablesorter', '//cdn.jsdelivr.net/g/jquery@2.2.4,leaflet@0.7.2,tablesorter@2.16.1' , false, null, true);
-        wp_register_script( 'ifgtablemapscript', plugin_dir_url() . 'ifg-table-map/js/ubersicht.js' , false, null, true);
+        wp_register_script( 'ifgtablemapscript', plugin_dir_url( __FILE__ ) . 'js/ubersicht.js' , false, null, true);
         wp_enqueue_script('jquerytoolsleaflettablesorter');
         wp_enqueue_script('ifgtablemapscript');
     }
@@ -22,7 +22,7 @@ function ifgtablemapScript(){
 function ifgtablemapStyles() {
     if( is_page( 'ubersicht' ) ) {
         wp_register_style( 'leafletcss', '//cdn.jsdelivr.net/leaflet/0.7.2/leaflet.css' );
-        wp_register_style( 'ifgtablemapstyles', plugin_dir_url() . 'ifg-table-map/ubersicht.css' ) ;
+        wp_register_style( 'ifgtablemapstyles', plugin_dir_url( __FILE__ )  . 'ubersicht.css' ) ;
         wp_enqueue_style( 'leafletcss' );
         wp_enqueue_style( 'ifgtablemapstyles' );
     }
