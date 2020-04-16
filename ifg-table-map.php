@@ -64,7 +64,7 @@ function ifgtablemap( $atts, $content = 0 ) {
 
     $bayernIfsResident = 0;
     
-    $html = file_get_contents( plugin_dir_url() . 'ifg-table-map/table.html' )  ;
+    $html = file_get_contents( plugin_dir_path( __FILE__ ) . 'table.html' )  ;
 
 
     foreach ($citys as $city) {
