@@ -5,6 +5,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; 2014 OpenStreetMap contributors'
 }).addTo(map);
 
+// draw shape of Bayern 
 $.getJSON( '/wp-content/plugins/ifg-table-map/js/bayern.json' , function(data) {
   var geoLayer;
   return geoLayer = L.geoJson(data, {
