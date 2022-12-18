@@ -1,3 +1,13 @@
+/*
+breakout
+*/
+#map,
+#woinbayern,
+#kartenlegende {
+    max-width: 120rem;
+}
+
+
 .woinbayern { 
 padding: 0 15px 15px 0px;
 }
