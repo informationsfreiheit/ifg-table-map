@@ -90,6 +90,7 @@ function ifgtablemap( $atts, $content = 0 ) {
         $html .= "<a title='Direkt zur Satzung' href='$city[satzlink]'>Satzung</a>";
         }
         $html .= "</td>
+<td><a title='Anfrage über fragdenstaat.de' href='$city[fragdenstaat_url]'>Anfrage</a></td>
 </tr>";
     }
     $html .= "</tbody></table>
