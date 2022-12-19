@@ -61,9 +61,6 @@ background: none !important;
 #woinbayern tbody tr td + td + td + td {
 font-size: 80%;
 }
-.satzlink a[href=""] {
-    background-image: none;
-}
 
 /* tooltip styling. by default the element to be styled is .tooltip  */
 .tooltip {
