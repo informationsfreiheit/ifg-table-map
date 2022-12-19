@@ -6,19 +6,13 @@ breakout
 #kartenlegende {
     max-width: 120rem;
 }
+.woinbayern tr:nth-child(even) {
+background: #FFF
+}
+.woinbayern td:first-child {
+width: 34px;
+}
 
-
-.woinbayern { 
-padding: 0 15px 15px 0px;
-}
-.woinbayern tr td {
-border-bottom: 1px solid #B8D8F0;
-line-height: 17px;
-padding: 3px !important;
-}
-.woinbayern tr th {
-padding: 9px 3px !important;
-}
 #map {
     height: 50em
 }
