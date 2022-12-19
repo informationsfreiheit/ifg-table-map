@@ -85,7 +85,11 @@ function ifgtablemap( $atts, $content = 0 ) {
 <td>$city[start]</td>
 <td>$city[bemerkung]</td>
 <td class='resident'>$cityresident</td>
-<td><a title='Direkt zur Satzung' href='$city[satzlink]'>Satzung</a></td>
+<td>";
+        if ( $city['satzlink'] != '' ) {
+        $html .= "<a title='Direkt zur Satzung' href='$city[satzlink]'>Satzung</a>";
+        }
+        $html .= "</td>
 </tr>";
     }
     $html .= "</tbody></table>
