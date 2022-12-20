@@ -10,7 +10,10 @@ breakout
 background: #FFF
 }
 .woinbayern td:first-child {
-width: 34px;
+width: 50px;
+}
+.woinbayern td:nth-child(2) {
+width: 410px;
 }
 
 #map {
@@ -45,6 +48,7 @@ list-style: none;
 #kartenlegende li {
 background: no-repeat scroll 0 8px transparent;
 padding-left: 15px;
+display: inline;
 }
 
 #kommunen div,
@@ -80,9 +84,7 @@ background: url("data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhW
 height: 9px;
 width: 21px;
 margin: 4px 0 0 0;
-}
-#woinbayern.woinbayern thead tr th:last-child {
-background-image: none ; 
+font-size: 0.8em;
 }
 
 
