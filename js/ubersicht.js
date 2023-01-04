@@ -1,7 +1,7 @@
 //  leafleat 
 var map = L.map('map').setView([48.949, 11.395], 7);
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; 2014 OpenStreetMap contributors'
 }).addTo(map);
 
