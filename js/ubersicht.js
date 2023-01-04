@@ -27,8 +27,6 @@ jQuery(document).ready(function() {
         var pos = $(this).data('pos') ;
         var cityname = $(this).attr('id') ;
         var name = $(this).find('.name').text() ;
-        var satzlink = $(this).find('td.satzlink').html(); 
-
 
         var iconString = 'icon' + $(this).data('gemart') ;
 
@@ -36,7 +34,7 @@ jQuery(document).ready(function() {
         // window[iconString] trick from http://stackoverflow.com/a/5613859/2248997
         if ( typeof pos != 'undefined' && pos != 'none' ) {
             pos = pos.split(',');
-            L.marker([ Number(pos[0]), Number(pos[1]) ], {icon: window[iconString] }).bindPopup( satzlink + "<a href='#" + cityname + "'>" + name + "</a>" ).addTo(map); 
+            L.marker([ Number(pos[0]), Number(pos[1]) ], {icon: window[iconString] }).bindPopup( "<a href='#" + cityname + "'>" + name + "</a>" ).addTo(map);
         }
     }); 
 });
