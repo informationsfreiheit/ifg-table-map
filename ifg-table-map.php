@@ -1,19 +1,19 @@
 <?php
 /**
  * @package ifgtablemap
- * @version 1.0
+ * @version 1.1
  */
 /*
 Plugin Name: ifgtablemap
-Description: ifgtablemap in yaml for http://informationsfreiheit.org/ubersicht/
+Description: ifgtablemap in yaml for https://informationsfreiheit.org/ubersicht/
 Author: Klaus Mueller
-Version: 1.0
+Version: 1.1
 Author URI: http://klml.de
 */
 
 function ifgtablemapScript(){
     if( is_page( 'ubersicht' ) ) {
-        wp_register_script( 'jquerytoolsleaflettablesorter', '//cdn.jsdelivr.net/g/jquery@2.2.4,leaflet@0.7.2,tablesorter@2.16.1' , false, null, true);
+        wp_register_script( 'jquerytoolsleaflettablesorter', 'https://cdn.jsdelivr.net/combine/npm/leaflet@1.9.3,npm/jquery@3.6.3,npm/tablesorter@2.31.3' , false, null, true);
         wp_register_script( 'ifgtablemapscript', plugin_dir_url( __FILE__ ) . 'js/ubersicht.js' , false, null, true);
         wp_enqueue_script('jquerytoolsleaflettablesorter');
         wp_enqueue_script('ifgtablemapscript');
@@ -21,7 +21,7 @@ function ifgtablemapScript(){
 }
 function ifgtablemapStyles() {
     if( is_page( 'ubersicht' ) ) {
-        wp_register_style( 'leafletcss', '//cdn.jsdelivr.net/leaflet/0.7.2/leaflet.css' );
+        wp_register_style( 'leafletcss', 'https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css' );
         wp_register_style( 'ifgtablemapstyles', plugin_dir_url( __FILE__ )  . 'ubersicht.css' ) ;
         wp_enqueue_style( 'leafletcss' );
         wp_enqueue_style( 'ifgtablemapstyles' );
