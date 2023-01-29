@@ -56,7 +56,7 @@ function ifgtablemap( $atts ) {
     $citys = yaml_parse_file($bayern_yaml);
 
     $citycounter = 0;
-    $bayernAllResident = 12691568 ;
+    $bayernAllResident = 13176989 ;
 
     $bayernIfsResident = 0;
     
