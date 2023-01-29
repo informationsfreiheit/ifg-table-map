@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'ifgtablemapScript' );
 
 
 
-function ifgtablemap( $atts, $content = 0 ) {
+function ifgtablemap( $atts ) {
 
     require_once plugin_dir_path( __FILE__ ) . "Spyc.php";
 
@@ -54,8 +54,6 @@ function ifgtablemap( $atts, $content = 0 ) {
         fwrite($fp, $out);
         fclose($fp);
     }
-
-    $content = file_get_contents( $bayern_yaml ) ;
 
     $citys = spyc_load_file( $bayern_yaml );
 
