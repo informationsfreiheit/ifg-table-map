@@ -90,7 +90,7 @@ function ifgtablemap( $atts ) {
 </tr>";
     }
     $html .= "</tbody></table>
-<p>Derzeit haben " . number_format($bayernIfsResident, 0, '','.') . " (" .  round( $bayernIfsResident / $bayernAllResident * 100 , 0 )  . " %) Einwohner in Bayern Akteneinsichtsrecht gemäß kommunaler Informationsfreiheit im Bereich des eigenen Wirkungskreis der Gemeinden (Stand: " . date("Y-m-d") . ").</p>" ;
+<p>Derzeit haben " . number_format($bayernIfsResident, 0, '','.') . " (" .  round( $bayernIfsResident / $bayernAllResident * 100 , 0 )  . " %) Einwohner in Bayern Akteneinsichtsrecht gemäß kommunaler Informationsfreiheit im Bereich des eigenen Wirkungskreis der Gemeinden.</p>" ;
 
     return $html ;
 }
