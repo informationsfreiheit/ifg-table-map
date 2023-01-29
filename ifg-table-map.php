@@ -34,8 +34,6 @@ add_action( 'wp_enqueue_scripts', 'ifgtablemapScript' );
 
 function ifgtablemap( $atts ) {
 
-    require_once plugin_dir_path( __FILE__ ) . "Spyc.php";
-
     $bayern_yaml = plugin_dir_path( __FILE__ ) .  'bayern.yaml';
 
     if( isset( $_REQUEST['load_ifg_table_map'] )) {
@@ -55,7 +53,7 @@ function ifgtablemap( $atts ) {
         fclose($fp);
     }
 
-    $citys = spyc_load_file( $bayern_yaml );
+    $citys = yaml_parse_file($bayern_yaml);
 
     $citycounter = 0;
     $bayernAllResident = 12691568 ;
